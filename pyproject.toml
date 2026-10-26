@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "echoguard"
+version = "0.1.0"
+description = "Research prototype for audio-based gunfire-like event screening"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "librosa>=0.10.2",
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikit-learn>=1.4",
+  "soundfile>=0.12",
+]
+
+[project.optional-dependencies]
+deep-learning = ["torch>=2.2"]
+dev = ["pre-commit>=4.0", "pytest>=8.0", "ruff>=0.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

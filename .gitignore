@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Data, uploads, models, and generated outputs
+data/raw/
+data/processed/
+data/external/
+uploads/
+models/
+artifacts/
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.mp4
+*.mov
+*.avi
+*.pt
+*.pth
+*.ckpt
+
+# Notebook and editor noise
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/

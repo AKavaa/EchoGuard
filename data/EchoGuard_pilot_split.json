@@ -1,0 +1,2121 @@
+{
+    "purpose": "Binary clip classification pilot with 150 examples per class",
+    "selection_seed": 42,
+    "split_sizes_per_class": {
+        "train": 100,
+        "validation": 25,
+        "test": 25
+    },
+    "path_root": "data/raw",
+    "selection_method": {
+        "PUBG": "Use both experiment 3 CSVs as the inventory. Exclude nogun. Assign each weapon label to one split as a proxy group. Sample roughly evenly across eligible weapon labels in each split.",
+        "controlled_firearm": "Sample one clip per original recording ID. Use session 1 for training and validation and session 2 for testing. Sample roughly evenly across the four labelled categories within each split."
+    },
+    "limitations": [
+        "PUBG weapon labels are proxy groups. The metadata does not establish whether different labels share game audio assets.",
+        "Different original recording IDs from session 1 may contain the same event captured by different devices. Validation is exploratory. The held-out range session is the independent session check.",
+        "Only one dataset represents each class. Performance can reflect dataset characteristics even with these splits."
+    ],
+    "clips": [
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r45_0m_center_1975.mp3",
+            "group": "r45"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/g36c_0m_center_0517.mp3",
+            "group": "g36c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mk_0m_center_1832.mp3",
+            "group": "mk"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/tomy_0m_center_0801.mp3",
+            "group": "tomy"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/win_0m_center_0871.mp3",
+            "group": "win"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vec_0m_center_2033.mp3",
+            "group": "vec"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dbs_0m_center_0499.mp3",
+            "group": "dbs"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m16_0m_center_0567.mp3",
+            "group": "m16"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pump_0m_center_1910.mp3",
+            "group": "pump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ak_100m_back_0894.mp3",
+            "group": "ak"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/verl_0m_center_2055.mp3",
+            "group": "verl"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/k2_0m_center_2098.mp3",
+            "group": "k2"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vss_0m_center_1735.mp3",
+            "group": "vss"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/sks_0m_center_0770.mp3",
+            "group": "sks"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/gro_0m_center_2087.mp3",
+            "group": "gro"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m24_400m_left_0182.mp3",
+            "group": "m24"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mini_0m_center_0643.mp3",
+            "group": "mini"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/awm_0m_center_0496.mp3",
+            "group": "awm"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p90_0m_center_1643.mp3",
+            "group": "p90"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/aug_0m_center_2077.mp3",
+            "group": "aug"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbz_0m_center_2179.mp3",
+            "group": "qbz"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p18c_0m_center_0673.mp3",
+            "group": "p18c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ump_0m_center_2002.mp3",
+            "group": "ump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m4_50m_back_1500.mp3",
+            "group": "m4"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p92_0m_center_1875.mp3",
+            "group": "p92"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/uzi_0m_center_0830.mp3",
+            "group": "uzi"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p1911_0m_center_0684.mp3",
+            "group": "p1911"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r45_0m_center_1969.mp3",
+            "group": "r45"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/g36c_0m_center_1806.mp3",
+            "group": "g36c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mk_0m_center_1829.mp3",
+            "group": "mk"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/tomy_0m_center_0818.mp3",
+            "group": "tomy"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/win_0m_center_2062.mp3",
+            "group": "win"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vec_0m_center_0841.mp3",
+            "group": "vec"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dbs_0m_center_1756.mp3",
+            "group": "dbs"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m16_0m_center_0574.mp3",
+            "group": "m16"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pump_0m_center_1913.mp3",
+            "group": "pump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ak_200m_front_0999.mp3",
+            "group": "ak"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/verl_0m_center_2045.mp3",
+            "group": "verl"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/k2_0m_center_2104.mp3",
+            "group": "k2"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vss_0m_center_1743.mp3",
+            "group": "vss"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/sks_0m_center_1666.mp3",
+            "group": "sks"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/gro_0m_center_0532.mp3",
+            "group": "gro"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m24_600m_right_0341.mp3",
+            "group": "m24"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mini_0m_center_0632.mp3",
+            "group": "mini"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/awm_0m_center_0483.mp3",
+            "group": "awm"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p90_0m_center_1644.mp3",
+            "group": "p90"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/aug_0m_center_0467.mp3",
+            "group": "aug"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbz_0m_center_0728.mp3",
+            "group": "qbz"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p18c_0m_center_0678.mp3",
+            "group": "p18c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ump_0m_center_1999.mp3",
+            "group": "ump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m4_200m_left_1379.mp3",
+            "group": "m4"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p92_0m_center_1868.mp3",
+            "group": "p92"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/uzi_0m_center_2013.mp3",
+            "group": "uzi"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p1911_0m_center_0683.mp3",
+            "group": "p1911"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r45_0m_center_1956.mp3",
+            "group": "r45"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/g36c_0m_center_1813.mp3",
+            "group": "g36c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mk_0m_center_1835.mp3",
+            "group": "mk"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/tomy_0m_center_0807.mp3",
+            "group": "tomy"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/win_0m_center_0877.mp3",
+            "group": "win"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vec_0m_center_2040.mp3",
+            "group": "vec"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dbs_0m_center_1749.mp3",
+            "group": "dbs"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m16_0m_center_0565.mp3",
+            "group": "m16"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pump_0m_center_1915.mp3",
+            "group": "pump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ak_200m_left_1015.mp3",
+            "group": "ak"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/verl_0m_center_0852.mp3",
+            "group": "verl"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/k2_0m_center_2095.mp3",
+            "group": "k2"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vss_0m_center_1740.mp3",
+            "group": "vss"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/sks_0m_center_1669.mp3",
+            "group": "sks"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/gro_0m_center_2085.mp3",
+            "group": "gro"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m24_600m_back_0286.mp3",
+            "group": "m24"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mini_0m_center_0638.mp3",
+            "group": "mini"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/awm_0m_center_0488.mp3",
+            "group": "awm"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p90_0m_center_1642.mp3",
+            "group": "p90"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/aug_0m_center_0466.mp3",
+            "group": "aug"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbz_0m_center_0730.mp3",
+            "group": "qbz"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p18c_0m_center_0674.mp3",
+            "group": "p18c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ump_0m_center_0825.mp3",
+            "group": "ump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m4_50m_right_1552.mp3",
+            "group": "m4"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p92_0m_center_1882.mp3",
+            "group": "p92"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/uzi_0m_center_2022.mp3",
+            "group": "uzi"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p1911_0m_center_1855.mp3",
+            "group": "p1911"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r45_0m_center_1961.mp3",
+            "group": "r45"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/g36c_0m_center_0518.mp3",
+            "group": "g36c"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mk_0m_center_0655.mp3",
+            "group": "mk"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/tomy_0m_center_0795.mp3",
+            "group": "tomy"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/win_0m_center_0879.mp3",
+            "group": "win"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vec_0m_center_2043.mp3",
+            "group": "vec"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dbs_0m_center_1744.mp3",
+            "group": "dbs"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m16_0m_center_0569.mp3",
+            "group": "m16"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pump_0m_center_0704.mp3",
+            "group": "pump"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/ak_600m_front_1230.mp3",
+            "group": "ak"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/verl_0m_center_2049.mp3",
+            "group": "verl"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/k2_0m_center_0551.mp3",
+            "group": "k2"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/vss_0m_center_1741.mp3",
+            "group": "vss"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/sks_0m_center_0764.mp3",
+            "group": "sks"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/gro_0m_center_0526.mp3",
+            "group": "gro"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m24_400m_right_0219.mp3",
+            "group": "m24"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/mini_0m_center_0630.mp3",
+            "group": "mini"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/awm_0m_center_0489.mp3",
+            "group": "awm"
+        },
+        {
+            "split": "train",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/p90_0m_center_1657.mp3",
+            "group": "p90"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/7b2c5211-c425-4a2d-9989-f8d1946d2187_chan5_v0.wav",
+            "group": "7b2c5211-c425-4a2d-9989-f8d1946d2187",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/d735d982-c6bb-4a60-9cc7-5c2f6d06da93_chan0_v0.wav",
+            "group": "d735d982-c6bb-4a60-9cc7-5c2f6d06da93",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/b5e04922-0cd9-4810-86d3-9f93e16124ad_v0.wav",
+            "group": "b5e04922-0cd9-4810-86d3-9f93e16124ad",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/ca2a3f01-63b4-47c9-b327-e9d93bf01ac2_v1.wav",
+            "group": "ca2a3f01-63b4-47c9-b327-e9d93bf01ac2",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/64f40277-43f3-46d4-ba9b-9552e2123cd8_v0.wav",
+            "group": "64f40277-43f3-46d4-ba9b-9552e2123cd8",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/bfcbf987-3056-4cf3-a40b-b209a365b672_chan0_v0.wav",
+            "group": "bfcbf987-3056-4cf3-a40b-b209a365b672",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/37861b06-0455-47e7-89de-c18e357eb9c8_chan6_v0.wav",
+            "group": "37861b06-0455-47e7-89de-c18e357eb9c8",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/a2eff80b-aeb3-46f1-a630-73c7f8afc797_v6.wav",
+            "group": "a2eff80b-aeb3-46f1-a630-73c7f8afc797",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/9e0b526e-e70d-434b-9a54-36c2529338ea_v0.wav",
+            "group": "9e0b526e-e70d-434b-9a54-36c2529338ea",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/09852d76-8a70-4330-9fe6-eb77961c2f4d_v0.wav",
+            "group": "09852d76-8a70-4330-9fe6-eb77961c2f4d",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/ad0d42e0-6945-4557-8650-b2713fbc4df9_v0.wav",
+            "group": "ad0d42e0-6945-4557-8650-b2713fbc4df9",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/cf5903aa-f70e-4b5a-8f0b-ab010db39792_v0.wav",
+            "group": "cf5903aa-f70e-4b5a-8f0b-ab010db39792",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/e074e5f5-465f-433f-a15d-ac6512ec1de2_chan6_v0.wav",
+            "group": "e074e5f5-465f-433f-a15d-ac6512ec1de2",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/9437417e-eb36-4ac3-9b94-e0729d3538ed_v0.wav",
+            "group": "9437417e-eb36-4ac3-9b94-e0729d3538ed",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/42899483-3654-4ed6-af56-48662821f13a_chan0_v0.wav",
+            "group": "42899483-3654-4ed6-af56-48662821f13a",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/b8524626-8850-45ce-8ed4-c8158a58d19c_v0.wav",
+            "group": "b8524626-8850-45ce-8ed4-c8158a58d19c",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/bb5a8b3f-3724-456e-83e1-55f5ca5ac68a_chan2_v0.wav",
+            "group": "bb5a8b3f-3724-456e-83e1-55f5ca5ac68a",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/cfde646e-bf55-425c-bf79-c8d263eb7e7a_v0.wav",
+            "group": "cfde646e-bf55-425c-bf79-c8d263eb7e7a",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/d31d3dec-08ba-4dfe-a64b-88a1ee4a5841_v0.wav",
+            "group": "d31d3dec-08ba-4dfe-a64b-88a1ee4a5841",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/201022ca-7dba-4eb6-9645-58ba06f2b80f_v0.wav",
+            "group": "201022ca-7dba-4eb6-9645-58ba06f2b80f",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/25066e4e-4e6f-4b9b-abd2-c7b7369a639b_v0.wav",
+            "group": "25066e4e-4e6f-4b9b-abd2-c7b7369a639b",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/c3bd5baf-fac3-48f7-b4b8-feb901710807_v1.wav",
+            "group": "c3bd5baf-fac3-48f7-b4b8-feb901710807",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/6ec0282d-1320-40e2-8ea0-21735864de2e_v0.wav",
+            "group": "6ec0282d-1320-40e2-8ea0-21735864de2e",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/28c03348-1f65-41e4-b601-a6d49d1f8eec_v0.wav",
+            "group": "28c03348-1f65-41e4-b601-a6d49d1f8eec",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/8b94cbfb-1e86-4adb-a90a-1f485c39df9e_v0.wav",
+            "group": "8b94cbfb-1e86-4adb-a90a-1f485c39df9e",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/dc1d4228-5750-4fc5-a821-e2c6f1dd0b27_mean_v0.wav",
+            "group": "dc1d4228-5750-4fc5-a821-e2c6f1dd0b27",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/d3c04068-8b2c-4dd6-a3e0-9bd56a346325_v0.wav",
+            "group": "d3c04068-8b2c-4dd6-a3e0-9bd56a346325",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/32ad3f19-100d-4e0f-9cd5-e5abf3e3b9d0_v0.wav",
+            "group": "32ad3f19-100d-4e0f-9cd5-e5abf3e3b9d0",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/d41d4367-070a-48f8-b457-7f0897caea99_v0.wav",
+            "group": "d41d4367-070a-48f8-b457-7f0897caea99",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/fd31de41-8e95-4d00-a81c-24a5c2212754_v0.wav",
+            "group": "fd31de41-8e95-4d00-a81c-24a5c2212754",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/bd0053c0-547f-4f27-8864-0763e2b8ce42_mean_v1.wav",
+            "group": "bd0053c0-547f-4f27-8864-0763e2b8ce42",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/fbd7f8cc-ad9e-4f74-8c4b-14a4af271113_chan0_v0.wav",
+            "group": "fbd7f8cc-ad9e-4f74-8c4b-14a4af271113",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/3e9e857b-ad46-45b1-bf87-863782c4b871_v0.wav",
+            "group": "3e9e857b-ad46-45b1-bf87-863782c4b871",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/20d713fe-1c29-4454-8a0d-c5d6d0f97859_v0.wav",
+            "group": "20d713fe-1c29-4454-8a0d-c5d6d0f97859",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/b6b54c4a-e6b0-487e-b476-25dc131d0607_chan4_v0.wav",
+            "group": "b6b54c4a-e6b0-487e-b476-25dc131d0607",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/8c9ff2a1-3a8c-4343-a370-ff51f92ee47b_v0.wav",
+            "group": "8c9ff2a1-3a8c-4343-a370-ff51f92ee47b",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/53bcb695-4358-46b3-9f96-d2d2a07bfb87_v1.wav",
+            "group": "53bcb695-4358-46b3-9f96-d2d2a07bfb87",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/d93deacb-1480-45e5-a92b-eb1988fbfd8d_mean_v0.wav",
+            "group": "d93deacb-1480-45e5-a92b-eb1988fbfd8d",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/f5ffbd82-997e-40e8-92be-4d083a10b95e_v0.wav",
+            "group": "f5ffbd82-997e-40e8-92be-4d083a10b95e",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/384d1064-178e-47ef-864f-650dbff5b577_v0.wav",
+            "group": "384d1064-178e-47ef-864f-650dbff5b577",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/1220241f-81de-4e3d-94cb-bdba4ebabd86_v1.wav",
+            "group": "1220241f-81de-4e3d-94cb-bdba4ebabd86",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/a0b21434-a906-4993-9a4d-0e781d8c0a53_v0.wav",
+            "group": "a0b21434-a906-4993-9a4d-0e781d8c0a53",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/e582412f-6f23-4af8-93e4-2138dc459306_mean_v0.wav",
+            "group": "e582412f-6f23-4af8-93e4-2138dc459306",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/bdeb48ea-313d-44e5-8148-263c50dc53f0_chan6_v0.wav",
+            "group": "bdeb48ea-313d-44e5-8148-263c50dc53f0",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/fe7bf3b2-7a7a-4a47-9c7d-c6d4354a7cfd_v0.wav",
+            "group": "fe7bf3b2-7a7a-4a47-9c7d-c6d4354a7cfd",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/33de82d7-fb9d-440e-9daa-6f632691c8d8_v0.wav",
+            "group": "33de82d7-fb9d-440e-9daa-6f632691c8d8",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/7d451790-0f0d-45e5-92fc-cbc68ede0a79_chan0_v0.wav",
+            "group": "7d451790-0f0d-45e5-92fc-cbc68ede0a79",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/a67ff046-e452-412a-ac51-159728387382_chan3_v0.wav",
+            "group": "a67ff046-e452-412a-ac51-159728387382",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/019439aa-e146-49da-b59c-28a594fba7e2_v3.wav",
+            "group": "019439aa-e146-49da-b59c-28a594fba7e2",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/a9777bab-f297-479c-a1fd-43ca9395282a_v0.wav",
+            "group": "a9777bab-f297-479c-a1fd-43ca9395282a",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/67c4b424-f7af-4b3d-8d82-edd7eba0f0ae_v2.wav",
+            "group": "67c4b424-f7af-4b3d-8d82-edd7eba0f0ae",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/9d01ad9a-3e6b-458c-a02d-dc30f4d83f61_chan0_v0.wav",
+            "group": "9d01ad9a-3e6b-458c-a02d-dc30f4d83f61",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/bddfd129-17e2-4775-bd7e-6039dbb24cb3_v0.wav",
+            "group": "bddfd129-17e2-4775-bd7e-6039dbb24cb3",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/3ca1d261-51c7-498d-880c-5b0848cd7b9a_v0.wav",
+            "group": "3ca1d261-51c7-498d-880c-5b0848cd7b9a",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/1f881663-d824-403c-bb7a-f97eb215a694_v0.wav",
+            "group": "1f881663-d824-403c-bb7a-f97eb215a694",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/adf63c42-6a31-4a4a-95c2-8cce6ce1894e_v1.wav",
+            "group": "adf63c42-6a31-4a4a-95c2-8cce6ce1894e",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/c52bfe4e-2a1d-44ca-9bfc-400bbf50d6a7_v0.wav",
+            "group": "c52bfe4e-2a1d-44ca-9bfc-400bbf50d6a7",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/0d477557-be49-40b0-9eb5-a5254d9cf41f_v0.wav",
+            "group": "0d477557-be49-40b0-9eb5-a5254d9cf41f",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/6f48638e-2508-467e-89c7-34648cfd0699_chan3_v0.wav",
+            "group": "6f48638e-2508-467e-89c7-34648cfd0699",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/3f5138a7-0f5b-4ead-b551-3475032820fb_chan2_v0.wav",
+            "group": "3f5138a7-0f5b-4ead-b551-3475032820fb",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/406b0f75-2c99-4b65-9b34-ab83ecd488b3_chan6_v0.wav",
+            "group": "406b0f75-2c99-4b65-9b34-ab83ecd488b3",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/5b4f210f-8dab-4ec7-9ae1-8f786c21b4a1_chan1_v0.wav",
+            "group": "5b4f210f-8dab-4ec7-9ae1-8f786c21b4a1",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/add8ab04-9181-4a95-8c5c-1538f857da1f_v2.wav",
+            "group": "add8ab04-9181-4a95-8c5c-1538f857da1f",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/19c4d59e-7e55-4246-b9bc-f7d5a8799fbd_v0.wav",
+            "group": "19c4d59e-7e55-4246-b9bc-f7d5a8799fbd",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/880cac70-86c1-4369-8fce-808a92d86844_v0.wav",
+            "group": "880cac70-86c1-4369-8fce-808a92d86844",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/8f6c0053-4723-4bd0-a048-a07e161c1b82_v0.wav",
+            "group": "8f6c0053-4723-4bd0-a048-a07e161c1b82",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/5e4ebcc3-9d66-443d-ac54-2af3394bb59c_v0.wav",
+            "group": "5e4ebcc3-9d66-443d-ac54-2af3394bb59c",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/e509bc91-85b5-43cf-9b71-3335089bee0a_chan6_v0.wav",
+            "group": "e509bc91-85b5-43cf-9b71-3335089bee0a",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/9d313a2c-cb6f-43c2-8b52-e9ddf4f951bb_v0.wav",
+            "group": "9d313a2c-cb6f-43c2-8b52-e9ddf4f951bb",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/79e3a045-8093-4614-9ea1-ad5643d61a1e_chan1_v0.wav",
+            "group": "79e3a045-8093-4614-9ea1-ad5643d61a1e",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/2567b43f-28b3-4df1-9c7c-aae01a354755_chan5_v0.wav",
+            "group": "2567b43f-28b3-4df1-9c7c-aae01a354755",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/eb656241-7b68-4fba-8bc2-328ac7288680_v0.wav",
+            "group": "eb656241-7b68-4fba-8bc2-328ac7288680",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/172e14ff-419c-441c-bf53-3c9ed0ffa490_chan1_v0.wav",
+            "group": "172e14ff-419c-441c-bf53-3c9ed0ffa490",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/46d64add-0759-4314-8d50-e764f78208d7_chan6_v0.wav",
+            "group": "46d64add-0759-4314-8d50-e764f78208d7",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/9702cac6-fa8d-423e-8c55-c3a2cba43a80_chan3_v0.wav",
+            "group": "9702cac6-fa8d-423e-8c55-c3a2cba43a80",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/32fa2ea1-e672-4404-a9be-acf8f37607da_v0.wav",
+            "group": "32fa2ea1-e672-4404-a9be-acf8f37607da",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/6f4ec5e4-de4a-4de7-bf2d-301b27d3f82f_v0.wav",
+            "group": "6f4ec5e4-de4a-4de7-bf2d-301b27d3f82f",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/a7973dd2-b255-4711-9f98-484eda03c56c_mean_v0.wav",
+            "group": "a7973dd2-b255-4711-9f98-484eda03c56c",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/5fd692e1-115c-4a3c-bf60-4002dd7797f6_v0.wav",
+            "group": "5fd692e1-115c-4a3c-bf60-4002dd7797f6",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/5ac8c241-4728-4ba2-a6ce-8cda24399cca_chan0_v0.wav",
+            "group": "5ac8c241-4728-4ba2-a6ce-8cda24399cca",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/e4aadaa4-c923-40a3-9739-84d021e5be2d_v0.wav",
+            "group": "e4aadaa4-c923-40a3-9739-84d021e5be2d",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/ee13c575-3522-4a1e-831e-7e6c765f000f_v0.wav",
+            "group": "ee13c575-3522-4a1e-831e-7e6c765f000f",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/7255367e-1e44-4f98-93c8-b492ff8287a7_v0.wav",
+            "group": "7255367e-1e44-4f98-93c8-b492ff8287a7",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/e843a6ae-b61e-48bf-bfa4-2fe2cc16e207_v0.wav",
+            "group": "e843a6ae-b61e-48bf-bfa4-2fe2cc16e207",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/fed855d4-d9c4-42c5-a5c5-ddc5edd69e14_v0.wav",
+            "group": "fed855d4-d9c4-42c5-a5c5-ddc5edd69e14",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/7cf68bd7-f94b-4ca8-9ff9-46a84a67bce8_chan6_v0.wav",
+            "group": "7cf68bd7-f94b-4ca8-9ff9-46a84a67bce8",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/7a4b953d-9527-4eee-a802-dd0000fcf6a3_v0.wav",
+            "group": "7a4b953d-9527-4eee-a802-dd0000fcf6a3",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/44d4ef73-d556-4651-b826-6d06c9ae67ed_v0.wav",
+            "group": "44d4ef73-d556-4651-b826-6d06c9ae67ed",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/261df355-2117-47fd-b48d-a2978969b866_v0.wav",
+            "group": "261df355-2117-47fd-b48d-a2978969b866",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/d2e86568-e511-4b01-8579-d5e9535df7e8_v0.wav",
+            "group": "d2e86568-e511-4b01-8579-d5e9535df7e8",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/8176af12-402d-4c0b-a2c3-9c0a8878ca8e_v2.wav",
+            "group": "8176af12-402d-4c0b-a2c3-9c0a8878ca8e",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/063b74d6-eb05-437e-b767-14a3248cd10c_chan3_v0.wav",
+            "group": "063b74d6-eb05-437e-b767-14a3248cd10c",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/63ad0e9a-02d2-4b6c-9921-525767ab502b_v0.wav",
+            "group": "63ad0e9a-02d2-4b6c-9921-525767ab502b",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/657bddc4-e58a-4621-ac4b-0cdc577ffc9d_mean_v0.wav",
+            "group": "657bddc4-e58a-4621-ac4b-0cdc577ffc9d",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/51e8f00c-9563-46b7-ab98-430ce0e62493_v2.wav",
+            "group": "51e8f00c-9563-46b7-ab98-430ce0e62493",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/edb8eb8b-c277-48df-b59f-e2d0a4fe9c87_v0.wav",
+            "group": "edb8eb8b-c277-48df-b59f-e2d0a4fe9c87",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/babd14d1-b207-4585-9c31-53f759e45eec_v0.wav",
+            "group": "babd14d1-b207-4585-9c31-53f759e45eec",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/9d9de7e0-b2b6-45ea-853d-b64f094647dc_v0.wav",
+            "group": "9d9de7e0-b2b6-45ea-853d-b64f094647dc",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/3a7d7603-f763-4bfb-900d-c8fab8cf3813_v0.wav",
+            "group": "3a7d7603-f763-4bfb-900d-c8fab8cf3813",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "train",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/1eb82b11-a962-4a55-82dc-9c5ec3dcdc65_v0.wav",
+            "group": "1eb82b11-a962-4a55-82dc-9c5ec3dcdc65",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r1895_0m_center_1943.mp3",
+            "group": "r1895"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/slr_0m_center_1696.mp3",
+            "group": "slr"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/scar_0m_center_2185.mp3",
+            "group": "scar"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/deagle_0m_center_1772.mp3",
+            "group": "deagle"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/s12k_0m_center_0743.mp3",
+            "group": "s12k"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r1895_0m_center_1948.mp3",
+            "group": "r1895"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/slr_0m_center_1717.mp3",
+            "group": "slr"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/scar_0m_center_2188.mp3",
+            "group": "scar"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/deagle_0m_center_1767.mp3",
+            "group": "deagle"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/s12k_0m_center_1980.mp3",
+            "group": "s12k"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r1895_0m_center_1945.mp3",
+            "group": "r1895"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/slr_0m_center_1708.mp3",
+            "group": "slr"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/scar_0m_center_0751.mp3",
+            "group": "scar"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/deagle_0m_center_1780.mp3",
+            "group": "deagle"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/s12k_0m_center_1984.mp3",
+            "group": "s12k"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r1895_0m_center_1942.mp3",
+            "group": "r1895"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/slr_0m_center_0793.mp3",
+            "group": "slr"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/scar_0m_center_0760.mp3",
+            "group": "scar"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/deagle_0m_center_1760.mp3",
+            "group": "deagle"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/s12k_0m_center_1978.mp3",
+            "group": "s12k"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/r1895_0m_center_1937.mp3",
+            "group": "r1895"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/slr_0m_center_1713.mp3",
+            "group": "slr"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/scar_0m_center_0755.mp3",
+            "group": "scar"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/deagle_0m_center_1771.mp3",
+            "group": "deagle"
+        },
+        {
+            "split": "validation",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/s12k_0m_center_0741.mp3",
+            "group": "s12k"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/210e3485-a655-4ade-b23f-74786943b62e_v0.wav",
+            "group": "210e3485-a655-4ade-b23f-74786943b62e",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/52d18cda-ccf9-43de-83a7-76bcc72fab6b_v0.wav",
+            "group": "52d18cda-ccf9-43de-83a7-76bcc72fab6b",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/50e34be8-c0b4-4fc5-80fc-4c52f2ffde7a_chan2_v0.wav",
+            "group": "50e34be8-c0b4-4fc5-80fc-4c52f2ffde7a",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/28d97af9-0450-4dc5-a40a-1eb40e387bf2_v0.wav",
+            "group": "28d97af9-0450-4dc5-a40a-1eb40e387bf2",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/1f85c0fd-51bb-470c-9b40-0f0faa5cae1f_chan0_v0.wav",
+            "group": "1f85c0fd-51bb-470c-9b40-0f0faa5cae1f",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/cc970b84-98ce-444f-b086-ab8a89289268_v0.wav",
+            "group": "cc970b84-98ce-444f-b086-ab8a89289268",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/1ad661e0-c668-444f-846e-53b74fd3b800_chan1_v0.wav",
+            "group": "1ad661e0-c668-444f-846e-53b74fd3b800",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/28957b0d-7a32-4901-a9f5-e8fc88bd37eb_v0.wav",
+            "group": "28957b0d-7a32-4901-a9f5-e8fc88bd37eb",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/85a24c95-5a49-469d-a5a1-d8ca7554b663_v0.wav",
+            "group": "85a24c95-5a49-469d-a5a1-d8ca7554b663",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/2eabebd8-8ef0-4efe-8248-a99013581760_v0.wav",
+            "group": "2eabebd8-8ef0-4efe-8248-a99013581760",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/a2f11812-20c1-4d8d-ac1b-20afb9dfd4c7_v0.wav",
+            "group": "a2f11812-20c1-4d8d-ac1b-20afb9dfd4c7",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/f0202070-f482-4f74-ba27-db1f5c8b1c12_v0.wav",
+            "group": "f0202070-f482-4f74-ba27-db1f5c8b1c12",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/1fbde55f-15ba-4137-9d20-c9ed6cbf0f06_v0.wav",
+            "group": "1fbde55f-15ba-4137-9d20-c9ed6cbf0f06",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/d60be857-2a00-49c0-9470-94a34b3de217_chan4_v0.wav",
+            "group": "d60be857-2a00-49c0-9470-94a34b3de217",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/13d6021d-7270-4635-b6ad-2cd4b6313314_mean_v0.wav",
+            "group": "13d6021d-7270-4635-b6ad-2cd4b6313314",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/bb8c98f3-1ab8-477f-955a-b60ffc37bdfd_v0.wav",
+            "group": "bb8c98f3-1ab8-477f-955a-b60ffc37bdfd",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/79c04fcc-da8d-4250-927b-9747b4f4354c_chan3_v0.wav",
+            "group": "79c04fcc-da8d-4250-927b-9747b4f4354c",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/f1ad53f5-d113-4a27-9929-f5013db0bc0c_v3.wav",
+            "group": "f1ad53f5-d113-4a27-9929-f5013db0bc0c",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/afc7fdde-835c-49ba-83e0-7f8e97c7769e_v0.wav",
+            "group": "afc7fdde-835c-49ba-83e0-7f8e97c7769e",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/326945b3-af71-4b72-861b-1ebf9ea0684d_v0.wav",
+            "group": "326945b3-af71-4b72-861b-1ebf9ea0684d",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/6fbbd03e-f48e-4c39-a698-6bfab08c7e86_v0.wav",
+            "group": "6fbbd03e-f48e-4c39-a698-6bfab08c7e86",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/b5b235cf-630b-4805-9c63-c9cc480e7981_v0.wav",
+            "group": "b5b235cf-630b-4805-9c63-c9cc480e7981",
+            "session": "1",
+            "category": "AR15"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/d312ea2f-8542-4ac2-8bd8-1e8b3433c4c3_mean_v0.wav",
+            "group": "d312ea2f-8542-4ac2-8bd8-1e8b3433c4c3",
+            "session": "1",
+            "category": "12gauge"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/4f5aefa2-101c-4384-bec8-8be7aa988a38_v0.wav",
+            "group": "4f5aefa2-101c-4384-bec8-8be7aa988a38",
+            "session": "1",
+            "category": "38cal"
+        },
+        {
+            "split": "validation",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/d44f6f66-430a-4f34-8a50-dde6403d0239_v0.wav",
+            "group": "d44f6f66-430a-4f34-8a50-dde6403d0239",
+            "session": "1",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/kar_0m_center_0552.mp3",
+            "group": "kar"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pp_0m_center_1885.mp3",
+            "group": "pp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbu_0m_center_1918.mp3",
+            "group": "qbu"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dp_0m_center_1789.mp3",
+            "group": "dp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m249_0m_center_0601.mp3",
+            "group": "m249"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/kar_0m_center_1285.mp3",
+            "group": "kar"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pp_0m_center_1889.mp3",
+            "group": "pp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbu_0m_center_1933.mp3",
+            "group": "qbu"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dp_0m_center_1794.mp3",
+            "group": "dp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m249_0m_center_2109.mp3",
+            "group": "m249"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/kar_0m_center_1295.mp3",
+            "group": "kar"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pp_0m_center_0702.mp3",
+            "group": "pp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbu_0m_center_1921.mp3",
+            "group": "qbu"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dp_0m_center_1791.mp3",
+            "group": "dp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m249_0m_center_0602.mp3",
+            "group": "m249"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/kar_0m_center_0555.mp3",
+            "group": "kar"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pp_0m_center_0701.mp3",
+            "group": "pp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbu_0m_center_1926.mp3",
+            "group": "qbu"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dp_0m_center_1796.mp3",
+            "group": "dp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m249_0m_center_0603.mp3",
+            "group": "m249"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/kar_0m_center_1280.mp3",
+            "group": "kar"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/pp_0m_center_0689.mp3",
+            "group": "pp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/qbu_0m_center_0718.mp3",
+            "group": "qbu"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/dp_0m_center_1798.mp3",
+            "group": "dp"
+        },
+        {
+            "split": "test",
+            "class": "PUBG",
+            "relative_path": "pubg_gun_sound_v2/m249_0m_center_0593.mp3",
+            "group": "m249"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/df9c8055-a6c4-483e-ac29-6da128a2cb18_v5.wav",
+            "group": "df9c8055-a6c4-483e-ac29-6da128a2cb18",
+            "session": "2",
+            "category": "38cal"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/backup_4115d032-3f33-407b-ab54-ca8b9433fe30__v1.wav",
+            "group": "backup_4115d032-3f33-407b-ab54-ca8b9433fe30_",
+            "session": "2",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/8184fe0d-878c-453b-b3fc-eb5ff5265b93_v0.wav",
+            "group": "8184fe0d-878c-453b-b3fc-eb5ff5265b93",
+            "session": "2",
+            "category": "AR15"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/6dc43274-f165-4c33-bb93-1c0657570f5d_v0.wav",
+            "group": "6dc43274-f165-4c33-bb93-1c0657570f5d",
+            "session": "2",
+            "category": "12gauge"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/ab0375b1-c44a-4ad1-bb16-b009b51d52ec_v0.wav",
+            "group": "ab0375b1-c44a-4ad1-bb16-b009b51d52ec",
+            "session": "2",
+            "category": "38cal"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/backup_38435a10-bcdd-4b6e-9f4d-080b7f3544c9__v2.wav",
+            "group": "backup_38435a10-bcdd-4b6e-9f4d-080b7f3544c9_",
+            "session": "2",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/876ef573-d86e-4d46-a003-8466f4d03d7f_mean_v0.wav",
+            "group": "876ef573-d86e-4d46-a003-8466f4d03d7f",
+            "session": "2",
+            "category": "AR15"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/f96e1f88-c321-4c29-98f4-1f61882c72e2_chan3_v0.wav",
+            "group": "f96e1f88-c321-4c29-98f4-1f61882c72e2",
+            "session": "2",
+            "category": "12gauge"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/2953714a-9fed-4926-943f-466071b77cf4_chan4_v0.wav",
+            "group": "2953714a-9fed-4926-943f-466071b77cf4",
+            "session": "2",
+            "category": "38cal"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/backup_e1e6a8dd-899c-47bb-a7ec-c480dfb33073__v0.wav",
+            "group": "backup_e1e6a8dd-899c-47bb-a7ec-c480dfb33073_",
+            "session": "2",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/d3863171-479e-4db8-bf20-b602efb56f5b_v3.wav",
+            "group": "d3863171-479e-4db8-bf20-b602efb56f5b",
+            "session": "2",
+            "category": "AR15"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/ae23cb87-9e7d-4d2c-8090-ce305213ec24_v0.wav",
+            "group": "ae23cb87-9e7d-4d2c-8090-ce305213ec24",
+            "session": "2",
+            "category": "12gauge"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/c3e941d7-3303-4b6d-a31a-096b36b5c937_v2.wav",
+            "group": "c3e941d7-3303-4b6d-a31a-096b36b5c937",
+            "session": "2",
+            "category": "38cal"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/backup_d3900443-f7b7-4802-9649-d71b5d068ba2__v1.wav",
+            "group": "backup_d3900443-f7b7-4802-9649-d71b5d068ba2_",
+            "session": "2",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/aacb484a-4c94-4004-af8d-5000066395af_v1.wav",
+            "group": "aacb484a-4c94-4004-af8d-5000066395af",
+            "session": "2",
+            "category": "AR15"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/d9c20c59-eb34-4d1e-b2ca-61e9c3532dff_v0.wav",
+            "group": "d9c20c59-eb34-4d1e-b2ca-61e9c3532dff",
+            "session": "2",
+            "category": "12gauge"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/9fdf59e0-107c-4ab8-8e5f-828c90bd17a2_v1.wav",
+            "group": "9fdf59e0-107c-4ab8-8e5f-828c90bd17a2",
+            "session": "2",
+            "category": "38cal"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/backup_11a102da-fefb-45db-9f99-8060349008ec__v0.wav",
+            "group": "backup_11a102da-fefb-45db-9f99-8060349008ec_",
+            "session": "2",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/895da372-8445-438b-9722-e4af033235a4_v2.wav",
+            "group": "895da372-8445-438b-9722-e4af033235a4",
+            "session": "2",
+            "category": "AR15"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/e060fe86-8161-48c2-889d-173b29cae7c9_v0.wav",
+            "group": "e060fe86-8161-48c2-889d-173b29cae7c9",
+            "session": "2",
+            "category": "12gauge"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/b6bf5729-5fdb-432d-94d2-2b6c11d4c010_v1.wav",
+            "group": "b6bf5729-5fdb-432d-94d2-2b6c11d4c010",
+            "session": "2",
+            "category": "38cal"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/glock_17_9mm_caliber/backup_7c25238e-3006-484d-ba63-9b2bf0ca18f1__v2.wav",
+            "group": "backup_7c25238e-3006-484d-ba63-9b2bf0ca18f1_",
+            "session": "2",
+            "category": "9mm"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/ruger_ar_556_dot223_caliber/5b8f44e7-f96c-4d55-b993-7960e747a9a5_v0.wav",
+            "group": "5b8f44e7-f96c-4d55-b993-7960e747a9a5",
+            "session": "2",
+            "category": "AR15"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/remington_870_12_gauge/86c3ad57-152f-4ad3-ba12-21dbc35c816e_v0.wav",
+            "group": "86c3ad57-152f-4ad3-ba12-21dbc35c816e",
+            "session": "2",
+            "category": "12gauge"
+        },
+        {
+            "split": "test",
+            "class": "controlled_firearm",
+            "relative_path": "edge-collected-gunshot-audio/edge-collected-gunshot-audio/38s&ws_dot38_caliber/c0b2e1a0-0ad1-485b-9df8-af37612ac034_chan2_v0.wav",
+            "group": "c0b2e1a0-0ad1-485b-9df8-af37612ac034",
+            "session": "2",
+            "category": "38cal"
+        }
+    ]
+}

@@ -36,23 +36,22 @@ def main():
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
     # Load training data used by the model to learn classification patterns
-    X_train, y_train, _ = load_features(manifest, "train", per_class=200)
+    X_train, y_train, _ = load_features(manifest, "train", per_class=100)
     print(f"Training features: {X_train.shape}")
 
     # Initialise Random Forest classifier with N decision trees
     model = RandomForestClassifier(n_estimators=50, random_state=42)
     model.fit(X_train, y_train)
 
-    X_val, y_val, val_paths = load_features(manifest, "validation", per_class=25)
-    print(f"Validation features: {X_val.shape}")
+    X_test, y_test, test_paths = load_features(manifest, "test", per_class=25)
+    print(f"Test features: {X_test.shape}")
 
-    # predict the classes of the validation audio samples
-    predictions = model.predict(X_val)
+    # predict the classes of the test audio samples
+    predictions = model.predict(X_test)
     misclassified = []
 
     # compare predicted labels with the actual labels
-    for audio_path, actual, predicted in zip(val_paths, y_val, predictions, strict=True):
-        print(f"Actual: {actual} | Predicted: {predicted}")
+    for audio_path, actual, predicted in zip(test_paths, y_test, predictions, strict=True):
         if actual != predicted:
             misclassified.append((audio_path, actual, predicted))
 
@@ -61,10 +60,16 @@ def main():
         print(f"  {audio_path.resolve()}")
         print(f"    Actual: {actual} | Predicted: {predicted}")
 
-    # Calculate model's classification accuracy on the validation dataset
-    total = len(y_val)
+    print("\nCorrect by class:")
+    for label in ("PUBG", "controlled_firearm"):
+        class_total = y_test.count(label)
+        class_errors = sum(actual == label for _, actual, _ in misclassified)
+        print(f"  {label}: {class_total - class_errors}/{class_total}")
+
+    # Calculate model's classification accuracy on the test dataset
+    total = len(y_test)
     correct = total - len(misclassified)
-    print(f"\nValidation accuracy: {correct}/{total} ({correct / total:.0%})")
+    print(f"\nTest accuracy: {correct}/{total} ({correct / total:.0%})")
 
 
 if __name__ == "__main__":
